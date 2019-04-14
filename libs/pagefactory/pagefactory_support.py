@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# https://jeremykao.wordpress.com/2015/06/10/pagefactory-pattern-in-python/
+# author: Jeremy, github: https://gist.github.com/imsardine/6185d76377e2c8d06d07#file-pageobject_support-py
+# updated to support python2 and python3
+
+
 import sys
 __all__ = ['visible', 'cacheable', 'callable_find_by', 'property_find_by']
 

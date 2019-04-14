@@ -2,9 +2,11 @@
 # coding=utf-8
 # author: zengyuetian
 
-from libs.pages.search_page import *
+import unittest
+from suites.search.test_search import *
 
-if __name__ == '__main__':
-    driver = webdriver.Chrome()
-    driver.get("https://www.baidu.com")
-    SearchPage(driver).search("selenium")
+if __name__ == "__main__":
+    suite = unittest.TestSuite()
+    suite.addTest(TestSearch('testSearchOk'))
+    runner = unittest.TextTestRunner()
+    runner.run(suite)
