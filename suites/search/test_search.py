@@ -3,7 +3,9 @@
 # author: zengyuetian
 
 import unittest
-from libs.pages.search_page import *
+from libs.pages.home_page import *
+from libs.pages.result_page import *
+from selenium import webdriver
 
 
 class TestSearch(unittest.TestCase):
@@ -13,7 +15,8 @@ class TestSearch(unittest.TestCase):
 
     def testSearchOk(self):
         self.driver.get("https://www.baidu.com")
-        SearchPage(self.driver).search("selenium")
+        HomePage(self.driver).search("selenium")
+        ResultPage(self.driver).verify_keyword("selenium1")
 
     def tearDown(self):
         self.driver.close()
